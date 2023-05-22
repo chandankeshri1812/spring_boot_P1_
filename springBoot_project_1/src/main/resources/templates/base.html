@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:fragment="layout(content)">
+
+<head>
+<meta charset="UTF-8">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<title th:text="${title}">base page</title>
+
+
+</head>
+
+<body>
+
+	<nav class="navbar">
+
+
+		<ul class="navbar_ul">
+			<li class="navbar_li"><a href="#">Home</a></li>
+			<li class="navbar_li"><a href="#">About</a></li>
+
+			<li class="navbar_li"><a href="#">Login</a></li>
+			<li class="navbar_li"><a href="/signup">Sign Up</a></li>
+
+		</ul>
+
+	</nav>
+
+
+
+	<div th:replace="${content}"></div>
+
+	<script th:src="@{/js/script.js}"></script>
+</body>
+
+</html>

@@ -8,6 +8,7 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <link rel="stylesheet" th:href="@{/css/style.css}" />
+<link rel="stylesheet" th:href="@{/css/userprofile.css}">
 
 
 <title th:text="${title}">base page</title>
@@ -23,9 +24,13 @@
 		<ul class="navbar_ul">
 			<li class="navbar_li"><a href="/">Home</a></li>
 			<li class="navbar_li"><a href="/about">About</a></li>
-			<li class="navbar_li"><a href="/signin">Reasearch Paper</a></li>
-			<li class="navbar_li"><a th:href="@{/signin}">Login</a></li>
-			<li class="navbar_li"><a th:href="@{/signup}">Sign Up</a></li>
+			<li class="navbar_li"><a href="#">Reasearch Paper</a></li>
+
+			<li class="navbar_li"><a th:href="@{/user/userprofileupdate}">Setting</a></li>
+
+			<li class="navbar_li"><a th:href="@{/user/profile}"><span
+					th:text="${user.name}"></span></a></li>
+			<li class="navbar_li"><a th:href="@{/logout}">Logout</a></li>
 
 
 		</ul>

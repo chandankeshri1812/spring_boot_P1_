@@ -1,0 +1,43 @@
+
+.user_profile_container{
+    background-color: aqua;
+    border: 2px solid red;
+
+    
+    height: 90vh;
+}
+.user_profile_container_1{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    margin: 50px;
+
+}
+
+.profile_right_container{
+    width: 30%;
+    border: 2px solid rgb(33, 255, 4);
+
+}
+.profile_left_container{
+    border: 2px solid rgb(37, 0, 247);
+
+    width: 70%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+font-family: sans-serif;
+
+
+}
+
+#user_hey{
+
+
+}
+#user_email{
+    
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/baseUser::layout(~{::section})">
+
+<head>
+	<meta charset="UTF-8">
+	<title>This is profile update page</title>
+</head>
+
+<body>
+
+	<section>
+
+		<h1>this is a update profie page</h1>
+
+
+
+	</section>
+
+
+
+	<section>
+		<div class="signup-container">
+			<div class="signup_row">
+				<div class="signup_col">
+
+					<div th:if="${session.message}" th:classappend="${session.message.type}" class="alert" role="alert">
+						<p th:text=${session.message.content}>
+							<p />
+
+					</div>
+
+					<div class="signup_card">
+
+
+						<h1 class="signup_text">Update your profile Here</h1>
+
+						<form th:object="${user}" th:action="@{/user/do_update_profile}" class="signup_form" method="post">
+
+							<!--  name  -->
+							<div class="form-group">
+								<label for="name_field">Your Name</label> <input type="text" class="signup_form_control"
+									id="name_field" aria-describedby="emailHelp" placeholder="Enter Name" name="name"
+									th:value="${user.name}" required>
+							</div>
+
+
+							<!-- email -->
+							<div class="form-group">
+								<label for="email_field">Your Email</label>
+								
+								<input  type="email"
+									class="signup_form_control" 
+									 name="email" th:value="${user.email}" required readonly>
+							</div>
+
+							<!--  phone number -->
+							<div class="form-group">
+								<label for="phoneNumber_field">Your Phone Number</label> <input type="tel"
+									class="signup_form_control" id="phoneNumber_field" aria-describedby="phoneNumberHelp"
+									placeholder="Enter Phone" name="phoneNumber" th:value="${user.phoneNumber}" required>
+							</div>
+
+							<!--  old password -->
+							<div class="form-group">
+								<label for="oldPassword_field">Enter Old Password</label> <input type="password"
+									class="signup_form_control" 
+									placeholder="Enter Old Passoword" name="oldPassword"  required>
+							</div>
+							
+							<!--  new  password -->
+							<div class="form-group">
+								<label for="newPassword_field">Enter New Password</label> <input type="password"
+									class="signup_form_control" 
+									placeholder="Enter new Passoword" name="newPassword"  required>
+							</div>
+							
+							<!--  confirm new password -->
+							<div class="form-group">
+								<label for="confirmPassword_field">Enter COnfirm Password</label> <input type="password"
+									class="signup_form_control" 
+									placeholder="Enter Confirm Passoword" name="newConfirmPassword"  required>
+							</div>
+
+
+							<!-- user about feild -->
+
+							<div class="form-group">
+								<label for="about_field">Entering something about
+									yourself</label>
+								<textarea name="about" th:value="${user.about}" class="signup_form_control"
+									id="signup_text" placeholder="I am web devloper" rows="3"></textarea>
+
+							</div>
+
+
+							<div class="form-group signup_form_check">
+
+								<input id="agrement" type="checkbox" name="argrement" class="signup_form_check_input" />
+								<label for="agreement">Accept
+									terms and conditons</label>
+							</div>
+
+							<!--  btn -->
+							<div class="signup_btn_container">
+
+								<button type="submit" class="btn btn-primary">Submit</button>
+								<button type="reset" class="btn btn-secondary">Reset</button>
+							</div>
+
+
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+</body>

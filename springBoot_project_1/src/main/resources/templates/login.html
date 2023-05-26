@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+
+<head>
+<meta charset="UTF-8">
+
+<title>This is login page</title>
+</head>
+<body>
+
+	<section>
+
+		<div class="login_container">
+			<div class="login_container_2">
+				<form th:action="@{/dologin}" method="post">
+					<div class="imgcontainer">
+						<img src="img_avatar2.png" alt="Avatar" class="avatar">
+					</div>
+
+					<div th:if="${param.error}" class="alert alert-danger">Invalid
+						username and Password</div>
+					<div th:if="${param.logout}" class="alert alert-success">You
+						have been logged out</div>
+						<div th:if="${param.change}" class="alert alert-success">
+					<p th:text="${param.change}"/>
+						</div>
+						
+
+					<div class="container">
+						<label for="uname"><b>Username</b></label> <input type="text"
+							placeholder="Enter Username" name="username" required> <label
+							for="psw"><b>Password</b></label> <input type="password"
+							placeholder="Enter Password" name="password" required>
+
+						<button type="submit">Login</button>
+						<label> <input type="checkbox" checked="checked"
+							name="remember"> Remember me
+						</label>
+					</div>
+
+					<div class="container">
+
+						<a th:href="@{/forgot}">Forgot password ?</a>
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+	</section>
+
+
+
+
+</body>
+</html>

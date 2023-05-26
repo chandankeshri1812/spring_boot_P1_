@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+th:replace ="normal/baseUser::layout(~{::section})"
+>
+
+<head>
+	<meta charset="UTF-8">
+	
+	<title>This is User profile</title>
+</head>
+
+<body>
+
+	<section>
+
+		<div class="user_profile_container">
+			<div class="user_profile_container_1">
+
+				
+
+				<div class="profile_left_container">
+
+					<p id="user_hey">Hey, There I</p>
+					<h1 class="user_name">
+						I am <span th:text="${user.name}"></span>
+					</h1>
+					<h1 id="user_email">
+						<span th:text="${user.email}"></span>
+					</h1>
+					<h2 id="user_phonNumber">
+						<span th:text="${user.phoneNumber}"></span>
+					</h2>
+					<p id="Profile_about">
+						<span th:text="${user.about}"></span>
+					</p>
+
+				</div>
+
+
+				<div class="profile_right_container">
+					<img src="" alt="profile_img">
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+</body>

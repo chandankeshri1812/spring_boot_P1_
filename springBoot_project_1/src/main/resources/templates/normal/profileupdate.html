@@ -8,110 +8,114 @@
 
 <body>
 
-	<section>
-
-		<h1>this is a update profie page</h1>
 
 
+	<section class="profile_update-sec">
+		<div class="profile_update-container">
 
-	</section>
+			<div th:if="${session.message}" th:classappend="${session.message.type}" class="alert" role="alert">
+				<p th:text=${session.message.content}>
 
+			</div>
 
+			<div class="profile_update_card">
 
-	<section>
-		<div class="signup-container">
-			<div class="signup_row">
-				<div class="signup_col">
+				<h1 class="signup_text">Update your profile Here</h1>
 
-					<div th:if="${session.message}" th:classappend="${session.message.type}" class="alert" role="alert">
-						<p th:text=${session.message.content}>
-							<p />
-
-					</div>
-
-					<div class="signup_card">
+				<form th:object="${user}" th:action="@{/user/do_update_profile}" class="profile_update_form" method="post">
 
 
-						<h1 class="signup_text">Update your profile Here</h1>
+					<div class="profile_update-row-container">
 
-						<form th:object="${user}" th:action="@{/user/do_update_profile}" class="signup_form" method="post">
-
+						<div class="profile_update-col-container">
 							<!--  name  -->
-							<div class="form-group">
-								<label for="name_field">Your Name</label> <input type="text" class="signup_form_control"
+							<div class="common-input-container">
+								<label class="common-form-label" for="name_field">Your Name</label> 
+								<input type="text" class="signup_form_control common-form-input"
 									id="name_field" aria-describedby="emailHelp" placeholder="Enter Name" name="name"
 									th:value="${user.name}" required>
 							</div>
 
 
 							<!-- email -->
-							<div class="form-group">
-								<label for="email_field">Your Email</label>
-								
-								<input  type="email"
-									class="signup_form_control" 
-									 name="email" th:value="${user.email}" required readonly>
-							</div>
+							<div class="common-input-container">
+								<label class="common-form-label" for="email_field">Your Email</label>
 
+								<input type="email" class="signup_form_control common-form-input" name="email" th:value="${user.email}"
+									required readonly>
+							</div>
+						</div>
+
+
+						<div class="profile_update-col-container">
 							<!--  phone number -->
-							<div class="form-group">
-								<label for="phoneNumber_field">Your Phone Number</label> <input type="tel"
-									class="signup_form_control" id="phoneNumber_field" aria-describedby="phoneNumberHelp"
-									placeholder="Enter Phone" name="phoneNumber" th:value="${user.phoneNumber}" required>
+							<div class="common-input-container">
+								<label class="common-form-label" for="phoneNumber_field">Your Phone Number</label> <input type="tel"
+									class="signup_form_control common-form-input" id="phoneNumber_field"
+									aria-describedby="phoneNumberHelp" placeholder="Enter Phone" name="phoneNumber"
+									th:value="${user.phoneNumber}" required>
 							</div>
 
 							<!--  old password -->
-							<div class="form-group">
-								<label for="oldPassword_field">Enter Old Password</label> <input type="password"
-									class="signup_form_control" 
-									placeholder="Enter Old Passoword" name="oldPassword"  required>
+							<div class="common-input-container">
+								<label class="common-form-label" for="oldPassword_field">Enter Old Password</label> <input type="password"
+									class="signup_form_control common-form-input" placeholder="Enter Old Passoword" name="oldPassword"
+									required>
 							</div>
-							
+						</div>
+
+						<div class="profile_update-col-container">
 							<!--  new  password -->
-							<div class="form-group">
-								<label for="newPassword_field">Enter New Password</label> <input type="password"
-									class="signup_form_control" 
-									placeholder="Enter new Passoword" name="newPassword"  required>
+							<div class="common-input-container">
+								<label class="common-form-label" for="newPassword_field">Enter New Password</label> <input type="password"
+									class="signup_form_control common-form-input" placeholder="Enter new Passoword" name="newPassword"
+									required>
 							</div>
-							
+
 							<!--  confirm new password -->
-							<div class="form-group">
-								<label for="confirmPassword_field">Enter COnfirm Password</label> <input type="password"
-									class="signup_form_control" 
-									placeholder="Enter Confirm Passoword" name="newConfirmPassword"  required>
+							<div class="common-input-container">
+								<label class="common-form-label" for="confirmPassword_field">Enter Confirm Password</label> <input type="password"
+									class="signup_form_control common-form-input" placeholder="Enter Confirm Passoword"
+									name="newConfirmPassword" required>
 							</div>
+						</div>
 
-
-							<!-- user about feild -->
-
-							<div class="form-group">
-								<label for="about_field">Entering something about
-									yourself</label>
-								<textarea name="about" th:value="${user.about}" class="signup_form_control"
-									id="signup_text" placeholder="I am web devloper" rows="3"></textarea>
-
-							</div>
-
-
-							<div class="form-group signup_form_check">
-
-								<input id="agrement" type="checkbox" name="argrement" class="signup_form_check_input" />
-								<label for="agreement">Accept
-									terms and conditons</label>
-							</div>
-
-							<!--  btn -->
-							<div class="signup_btn_container">
-
-								<button type="submit" class="btn btn-primary">Submit</button>
-								<button type="reset" class="btn btn-secondary">Reset</button>
-							</div>
-
-
-						</form>
 					</div>
-				</div>
+					<div class="profile_update-row-container">
+
+						<!-- user about feild -->
+
+						<div class="common-input-container">
+							<label class="common-form-label common-form-input" for="about_field">Entering something about
+								yourself</label>
+							<textarea name="about" th:value="${user.about}" class="signup_form_control" id="signup_text"
+								placeholder="I am web devloper" rows="3"></textarea>
+
+						</div>
+
+
+						<div class="common-input-container profile_update_check">
+							<input id="agrement" type="checkbox" name="argrement" class="signup_form_check_input common-form-input" />
+							<label for="agreement">Accept
+								terms and conditons</label>
+						</div>
+
+					</div>
+
+
+
+
+					<!--  btn -->
+					<div class="profile_update_btn_container">
+
+						<button type="submit" class="btn btn-primary">Update Your Profile</button>
+						<button type="reset" class="btn btn-secondary">Reset</button>
+					</div>
+
+
+				</form>
 			</div>
+
 
 		</div>
 	</section>

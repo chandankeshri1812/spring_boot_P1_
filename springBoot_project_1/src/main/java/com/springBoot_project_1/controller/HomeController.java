@@ -19,9 +19,9 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class HomeController {
-	
+
 	@Autowired
-private BCryptPasswordEncoder passwordEncoder;
+	private BCryptPasswordEncoder passwordEncoder;
 	@Autowired
 	private UserRepository userRepository;
 
@@ -50,9 +50,8 @@ private BCryptPasswordEncoder passwordEncoder;
 //	 this handle for  registration user 
 	@RequestMapping(value = "/do_register", method = RequestMethod.POST)
 	public String registerUser(@ModelAttribute("user") User user,
-			@RequestParam(value = "argrement", defaultValue = "false") boolean argrement, Model model
-			,HttpSession session
-			) {
+			@RequestParam(value = "argrement", defaultValue = "false") boolean argrement, Model model,
+			HttpSession session) {
 
 		System.out.println("Agreement " + argrement);
 
@@ -60,6 +59,7 @@ private BCryptPasswordEncoder passwordEncoder;
 			if (!argrement) {
 				System.out.println("you have not agreed the terms and conditions");
 				throw new Exception("you have not agreed the terms and conditions");
+				
 			}
 			user.setRole("ROLE_USER");
 			user.setEnabled(true);
@@ -70,29 +70,25 @@ private BCryptPasswordEncoder passwordEncoder;
 			User result = this.userRepository.save(user);
 
 			model.addAttribute("user", new User());
-			session.setAttribute("message",new Message("Successfully Registered ", "alert-success"));
+			session.setAttribute("message", new Message("Successfully Registered ", "alert-success"));
 			return "signup";
-
-
 		} catch (Exception e) {
 
 			e.printStackTrace();
-			model.addAttribute("user",user);
-			session.setAttribute("message", new Message("Something went wrong : " + e.getMessage(),"alert-danger"));
+			model.addAttribute("user", user);
+			session.setAttribute("message", new Message("Something went wrong : " + e.getMessage(), "alert-danger"));
 			return "signup";
 		}
-		
 
 	}
-	
-	
+
 	@GetMapping("/signin")
 	public String customLogin(Model model) {
-		
+
 //		model.addAttribute(model)
-		
+
 		return "login";
-		
+
 	}
 
 }

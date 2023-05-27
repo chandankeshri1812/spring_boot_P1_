@@ -10,37 +10,41 @@
 
 <body>
 
-	<section>
+
+
+
+	<section class="forgot-email-sec">
 
 		<div class="forgot_email_form_container">
-			<div class="forgot_email_form_container_"></div>
-			<h3 class="">Your verify otp</h3>
+			<div class="forgot_email_form_container_text">
 
-			<div class="alert alert-success" role="alert">We have send OTP
-				to your email</div>
+				<h3>Please verify OTP</h3>
+			</div>
 
+			<div class="forgot_email_form_container_form_container">
 
-			<div>
-				<form th:action="@{/verify_otp}" method="post">
+				<form
+					class="forgot_email_form_container_form common-input-container"
+					th:action="@{/verify_otp}" method="post">
 
 
 					<div class="forgot_email_form_form_group">
 
-						<input name="otp" type="text"
-							placeholder="Enter your OTP here" class="form_control" required />
+						<input name="otp" type="text" placeholder="Enter your OTP here"
+							class="form_control common-form-input" required />
 
 					</div>
 
-					<div class="container">
-						<button class="btn btn-primary">Verify</button>
-					</div>
 
+					<div class="forgot_email_form_btn_container">
+						<button class="forgot_email_form_btn_send btn btn-primary">
+							Verify</button>
+					</div>
 
 				</form>
 			</div>
 		</div>
 	</section>
-
 
 
 

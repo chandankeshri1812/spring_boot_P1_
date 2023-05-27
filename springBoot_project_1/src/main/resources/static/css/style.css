@@ -1,117 +1,394 @@
-*{
+/* base.css */
+/* http://carsonified.com/blog/design/setting-rather-than-resetting-default-styling/ */
+/* http://developer.yahoo.com/yui/fonts/ */
+/* http://developer.yahoo.com/yui/base/ */
+
+/* Font Reset from YUI http://developer.yahoo.com/yui/fonts
+If you want this size in pixels (px)	Declare this percent (%)
+                  10	                        77
+                  11	                        85
+                  12	                        93 (was 93)
+                  13	                        100
+                  14	                        108 (was 107)
+                  15	                        116 (was 114)
+                  16	                        123.1 (was 122)
+                  17	                        131 (was 129)
+                  18	                        138.5 (was 136)
+                  19	                        146.5 (was 144)
+                  20	                        153.9 (was 152)
+                  21	                        161.6 (was 159)
+                  22	                        167
+                  23	                        174
+                  24	                        182
+                  25	                        189
+                  26	                        197
+*/
+
+
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+:root {
+    --btn-primary: #146ec8;
+    --btn-seconday: #492121;
+  }
+  
+  
+
 body {
     font-family: sans-serif;
-    font-size: 16px;
+
+    font: 13px/1.231 arial, helvetica, clean, sans-serif;
+    /* YUI Font Reset */
+    *font-size: small;
+    /* YUI Font Reset */
+    *font: x-small;
+    /* YUI Font Reset */
+    height: 100%;
+    background: #fff;
+    /* not all browsers set white as the default background color  */
+    color: #444;
+    /* color is set to create not too much contrast with the background color */
+    line-height: 1.4;
+    /* line-height is to ensure that text is legible enough ( enough space between the lines) */
+}
+
+select,
+input,
+button,
+textarea,
+button {
+    font: 99% arial, helvetica, clean, sans-serif;
+}
+
+pre,
+code,
+kbd,
+samp,
+tt {
+    font-family: sans-serif;
+    *font-size: 108%;
+    line-height: 100%;
+}
+
+/* margin and padding values are reset for all these elements
+ * you could remove from there elements you do not used in your documents, but I don't think it'd worth it
+ */
+body,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ul,
+ol,
+dl {
+    /* top & bottom margin based on font size */
+    margin: 1em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+th,
+dt,
+b {
+    /*bringing boldness back to headers and the strong element*/
+    font-weight: bold;
+}
+
+abbr,
+acronym {
+    /*indicating to users that more info is available */
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+em,
+blockquote,
+q,
+em,
+cite,
+dfn,
+i,
+cite,
+var,
+address {
+    /*bringing italics back */
+    font-style: italic;
+}
+
+ol,
+ul,
+dl {
+    /*bringing lists on to the page with breathing room */
+    margin-left: 2em;
+}
+
+ol li {
+    /*giving OL's LIs generated numbers*/
+    list-style: decimal outside;
+}
+
+ul li {
+    /*giving UL's LIs generated disc markers*/
+    list-style: none;
+}
+
+dl dd {
+    /*giving UL's LIs generated numbers*/
+    margin-left: 1em;
+}
+
+th,
+td {
+    /*borders and padding to make the table readable*/
+    border: 1px solid #000;
+    padding: .5em;
+}
+
+/* all th should be centered unless they are in tbody (table body) */
+th {
+    /*distinguishing table headers from data cells*/
+    text-align: center;
+}
+
+tbody th {
+    text-align: left;
+}
+
+/* caption and summary are very important for tabular data but because caption is nearly impossible to style across browsers many authors do not use it or use display:none to "hide" it (which is almost the same as not using it).
+ * so to prevent such workaround, I am positioning this element off-screen
+ */
+caption {
+    position: absolute;
+    left: -999em;
+}
+
+/* this is to prevent border from showing around fieldsets and images (i.e., images inside anchors)
+ */
+fieldset,
+img {
+    border: 0;
+}
+
+/* to prevent a gap from showing below images in some browsers
+ */
+img {
+    vertical-align: top;
+}
+a:link, a:visited {color: #000;}
+a:focus,:focus {outline: 1px dotted #000;}
+a:active, input:active, select:active, textarea:active {outline: none;}
+
+abel {
+    width: 120px;
+    display: inline-block;
+  }
+  
+  abbr {
+    cursor: default;
+    border: none;
+  }
+  
+  input, textarea {
+   font-size:110%;
+  }
+  
+  select {
+    font-size:120%;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="file"]:focus,
+  input[type="email"]:focus,
+  textarea:focus, select:focus {
+    border:2px solid #2c2c2c;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="file"],
+  input[type="email"],
+  textarea, select {
+    width: 300px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border:2px solid #D2D1CF;
+    color:#555555;
+    outline: 0 none;
+    padding:5px;
+  }
+  
+  form .input label {
+    vertical-align: middle;
+  }
+  
+  form .input.text label {
+    vertical-align: top;
+  }
+
+
+  field_with_errors input[type="text"],
+.field_with_errors input[type="password"],
+.field_with_errors input[type="file"],
+.field_with_errors textarea,
+.field_with_errors select {
+  border:2px solid #E0A7A7;
+}
+.field_with_errors input[type="text"]:focus,
+.field_with_errors input[type="password"]:focus,
+.field_with_errors input[type="file"]:focus,
+.field_with_errors textarea:focus {
+  border:2px solid #B22222;
+}
+
+.field_with_errors .error {
+  padding-left: 10px;
+}
+
+.btn {
+  
+    background-image: linear-gradient(#0dccea, #0d70ea);
+    border: 0;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: Montserrat,sans-serif;
+    font-size: .9em;
+    margin: 5px;
+    padding: 10px 15px;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 
-.navbar{
+
+.btn-primary {
+    background-color: var(--btn-primary); 
+}
+
+.btn-secondary {
+    background-color: var(--btn-seconday); 
+
+}
+
+
+
+
+
+
+.common-input-container {
+
+	/* border: 2px solid rgb(255, 239, 10); */
+	display: flex;
+justify-content: center;
+align-content: center;
+flex-direction: column;
+padding: 10px 15px;
+
+}
+.common-form-label{
+	padding: 10px 0px;
+	color: var(--btn-primary);
+	font-size: 16px ;
+	font-family: sans-serif;
+	font-weight: 400;
+
+}
+.common-form-input{
+	padding: 10px 15px;
+	
+	font-size: 13px ;
+	font-family: sans-serif;
+	font-weight: 400;
+
+}
+/* ------------------------------------- */
+
+.navbar {
     color: rgb(255, 255, 255);
-    border: 2px solid red ;
+    /* border: 2px solid red; */
     display: flex;
-    flex-wrap: wrap; 
-    justify-content:space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     background: #2c2c2c;
     padding: 0 15px;
-    height: 60px;
-    
+    height: 10vh;
+
 
 }
-.navbar_ul{
+
+.navbar_ul {
     list-style-type: none;
     display: flex;
-    flex-direction:row;
-    justify-content:space-evenly;
+    flex-direction: row;
+    justify-content: space-evenly;
 
 
 }
-.navbar_li{
- padding: 0px 10px ;
+
+.navbar_li {
+    padding: 0px 10px;
 }
-.navbar_ul a{
+
+.navbar_ul a {
     color: rgb(172, 172, 172);
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
-    
-}
-
-
-
-
-
-
-
-.signup-container{
-    border: 2px solid  red;
-width: 100%;
-height: 80vh;
-display: flex;
-flex-direction: column;
-align-items: center;
 
 }
-.signup_row{
 
-}
-.signup_col{
+/* ----------------------------------- */
 
-}
-.signup_card{
 
-}
-.signup_form{
-    display: flex;
-    flex-direction: column;
-    border: 2px solid rgb(235, 236, 235);
-    margin: 50px;
-    width: 80%;
-    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-padding: 20px;
 
-}
-.signup_card .form-group{
-    /* background-color: red; */
-    display: flex;
-    flex-direction: column;
-    padding: 10px 10px ;
-}
-.form-group label{
-    font-size: 12px;
-    color: #443324;
-    font-weight:500 ;
-    font-style: normal;
-    font-family: sans-serif;
-    padding:4px 0px;
-}
 
-.signup_form_control{
-    color: rgb(0, 0, 0);
-    background-color: rgb(110, 110, 110);
-    padding: 5px 10px;
-    border: 1px solid rgb(138, 138, 138);
-    border-radius:2px;
-width: 100%;
-flex-wrap: wrap;
-font-size: 14px;
-}
-.btn {
-    border: none; 
-    color: white; 
-    padding: 14px 28px; 
-    cursor: pointer; 
-    border-radius: 3px;
-  }
 
-.btn-primary{
-    background-color: #703f17;
-}
-.btn-secondary{
-    background-color: #443324;
 
-}
+/* ---------------------- */

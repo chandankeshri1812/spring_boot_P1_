@@ -9,29 +9,33 @@
 
 <body>
 
-	<section>
+	<section class="forgot-email-sec">
 
 		<div class="forgot_email_form_container">
-			<div class="forgot_email_form_container_"></div>
-			<h3 class="">Your Registration Email</h3>
+			<div class="forgot_email_form_container_text">
 
-			<div>
+				<h3>Your Registration Email</h3>
+			</div>
 
-				<form th:action="@{/send_otp}" method="post">
+			<div class="forgot_email_form_container_form_container">
+
+				<form class="forgot_email_form_container_form common-input-container" th:action="@{/send_otp}"
+					method="post">
 
 
 					<div class="forgot_email_form_form_group">
 
-						<input name="email" type="email" placeholder="Enter your Email here" class="form_control" required />
+						<input name="email" type="email" placeholder="Enter your Email here"
+							class="form_control common-form-input" required />
 
 					</div>
 
-					<div class="container">
-						<button class="btn btn-primary">
+
+					<div class="forgot_email_form_btn_container">
+						<button class="forgot_email_form_btn_send btn btn-primary">
 							Send OTP
 						</button>
 					</div>
-
 
 				</form>
 			</div>

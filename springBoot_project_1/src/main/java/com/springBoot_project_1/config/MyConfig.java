@@ -41,8 +41,6 @@ public class MyConfig  {
 	    return authConfig.getAuthenticationManager();
 	}
 	
-	
-	
 
 @Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -62,11 +60,6 @@ public class MyConfig  {
 	.failureUrl("/login_fail")
 	;
 	
-	
-	
-	
-	
-
 	return http.build();
 	
 	

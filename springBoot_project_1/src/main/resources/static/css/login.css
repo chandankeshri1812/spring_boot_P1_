@@ -1,4 +1,195 @@
-body{
-	background:red;
-	border:2px solid green;
+
+/*  signup */
+.signup-container {
+	/* border: 2px solid red; */
+	width: 100vw;
+
+	height: 90vh;
 }
+
+.signup-row-container {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+}
+
+.signup-col-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+.signup_card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.signup_form {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	border: 2px solid rgb(235, 236, 235);
+	/* margin: 0px; */
+	width: 50vw;
+	box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+	padding: 20px;
+	flex-wrap: wrap;
+
+}
+
+.signup_text {
+	text-align: center;
+}
+
+.signup_card .form-group {
+
+	display: flex;
+	flex-direction: column;
+	padding: 10px 10px;
+}
+
+
+.signup_form_check {
+	/* border: 2px solid green; */
+	display: block;
+	position: relative;
+	padding-left: 14px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 15px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.signup_form_check input {
+
+	/* background: red;
+	font-size: 19px; */
+	/* position: absolute; */
+	/* opacity: 1.0; */
+	cursor: pointer;
+	/* height: 0;
+	width: 0; */
+}
+
+.signup_form_check label {
+
+	padding-top: 12px 0px;
+}
+
+/*  login page  */
+.login_container {
+	/* background: red; */
+	/* border: 2px solid green; */
+	height: 60vh;
+
+
+}
+
+
+.login_container_2 {
+	/* border: 2px solid rgb(11, 105, 164); */
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	margin: 100px;
+
+
+}
+
+.login_container_2 form {
+
+
+	/* border: 2px solid rgb(71, 252, 186); */
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	border: 2px solid rgb(235, 236, 235);
+	box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.login-imgcontainer {
+
+
+	margin: 10px;
+
+}
+
+.login-container-input {}
+
+.login-form-label {}
+
+.login-form-input {}
+
+.login-form-btn {
+	margin: 10px 0px;
+}
+
+.forgot-password-btn-container {
+	padding: 10px 15px;
+	margin: 18px;
+
+
+}
+
+.forgot-password-btn-container a {
+	text-decoration: none;
+	width: 100%;
+}
+
+/* forgot email form  */
+.forgot-email-sec {
+
+	height: 90vh;
+	max-width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.forgot_email_form_container {
+	/* border: 2px solid rgb(15, 30, 103);  */
+	display: flex;
+	border: 2px solid rgb(235, 236, 235);
+	box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+	justify-content: center;
+	align-content: center;
+	/* padding-top: 100px; */
+	flex-direction: column;
+	width: 30%;
+	margin: 20vh;
+	height: 25vh;
+
+}
+
+.forgot_email_form_container_text {
+	/* border: 2px solid rgb(103, 15, 15);  */
+
+
+}
+
+.forgot_email_form_container_text h3 {
+	text-align: center;
+}
+
+.forgot_email_form_container_form_container {
+	/* border: 2px solid rgb(68, 244, 15);  */
+
+}
+
+.forgot_email_form_container_form {}
+
+.forgot_email_form_form_group {}
+
+.forgot_email_form_btn_container {
+	margin-top: 5px;
+
+}
+
+.forgot_email_form_btn_send {}

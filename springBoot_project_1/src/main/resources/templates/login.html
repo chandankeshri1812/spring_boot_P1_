@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-	th:replace="base::layout(~{::section})">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
 
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 
-<title>This is login page</title>
+	<title>This is login page</title>
 </head>
+
 <body>
 
 	<section>
@@ -14,7 +14,7 @@
 		<div class="login_container">
 			<div class="login_container_2">
 				<form th:action="@{/dologin}" method="post">
-					<div class="imgcontainer">
+					<div class="login-imgcontainer">
 						<img src="img_avatar2.png" alt="Avatar" class="avatar">
 					</div>
 
@@ -22,26 +22,28 @@
 						username and Password</div>
 					<div th:if="${param.logout}" class="alert alert-success">You
 						have been logged out</div>
-						<div th:if="${param.change}" class="alert alert-success">
-					<p th:text="${param.change}"/>
-						</div>
-						
+					<div th:if="${param.change}" class="alert alert-success">
+						<p th:text="${param.change}" />
+					</div>
 
-					<div class="container">
-						<label for="uname"><b>Username</b></label> <input type="text"
-							placeholder="Enter Username" name="username" required> <label
-							for="psw"><b>Password</b></label> <input type="password"
+
+					<div class="login-container-input common-input-container">
+						<label class="login-form-label common-form-label" for="uname"><b>Username</b></label> 
+						<input class="login-form-input common-form-input" type="text" placeholder="Enter Username"
+							name="username" required>
+							 <label class="login-form-label common-form-label" for="psw"><b>Password</b>
+							</label> 
+							<input class="login-form-input common-form-input" type="password"
 							placeholder="Enter Password" name="password" required>
 
-						<button type="submit">Login</button>
-						<label> <input type="checkbox" checked="checked"
-							name="remember"> Remember me
+						<button class="login-form-btn btn btn-primary" type="submit">Login</button>
+						<label> <input type="checkbox" checked="checked" name="remember"> Remember me
 						</label>
 					</div>
 
-					<div class="container">
+					<div  class="forgot-password-btn-container btn btn-primary">
 
-						<a th:href="@{/forgot}">Forgot password ?</a>
+						<a  th:href="@{/forgot}">Forgot password ?</a>
 					</div>
 				</form>
 
@@ -54,4 +56,5 @@
 
 
 </body>
+
 </html>

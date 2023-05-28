@@ -10,7 +10,6 @@ public class SpringBootProject1Application {
 		SpringApplication.run(SpringBootProject1Application.class, args);
 
 		
-	
 		
 	
 	}

@@ -28,13 +28,14 @@ public class User {
 	@Column(length=10,unique=true)
 	private String phoneNumber;
 	
-	private Boolean enabled;
+//	private Boolean enabled;
 	private String role;
 	private String imageUrl;
 	
 	
 	
-	public User(int id, String name, String email, String about, String password, String phoneNumber, Boolean enabled,
+	public User(int id, String name, String email, String about, String password, String phoneNumber, 
+//			Boolean enabled,
 			String role, String imageUrl) {
 		super();
 		this.id = id;
@@ -43,7 +44,7 @@ public class User {
 		this.about = about;
 		this.password = password;
 		this.phoneNumber = phoneNumber;
-		this.enabled = enabled;
+//		this.enabled = enabled;
 		this.role = role;
 		this.imageUrl = imageUrl;
 	}
@@ -60,7 +61,9 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", email=" + email + ", about=" + about + ", password=" + password
-				+ ", phoneNumber=" + phoneNumber + ", enabled=" + enabled + ", role=" + role + ", imageUrl=" + imageUrl
+				+ ", phoneNumber=" + phoneNumber + 
+//				", enabled=" + enabled + 
+				", role=" + role + ", imageUrl=" + imageUrl
 				+ "]";
 	}
 
@@ -138,16 +141,16 @@ public class User {
 
 
 
-	public Boolean getEnabled() {
-		return enabled;
-	}
-
-
-
-	public void setEnabled(Boolean enabled) {
-		this.enabled = enabled;
-	}
-
+//	public Boolean getEnabled() {
+//		return enabled;
+//	}
+//
+//
+//
+//	public void setEnabled(Boolean enabled) {
+//		this.enabled = enabled;
+//	}
+//
 
 
 	public String getRole() {

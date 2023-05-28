@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:fragment="layout(content)">
+
+<head>
+<meta charset="UTF-8">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<link rel="stylesheet" th:href="@{/css/userprofile.css}">
+
+
+<title th:text="${title}">base page for admin dashbaord</title>
+
+</head>
+
+
+<body>
+
+	<nav class="navbar">
+
+
+		<ul class="navbar_ul">
+
+			<li class="navbar_li"><a href="#">Reasearch Paper</a></li>
+<li class="navbar_li"><a href="#">ADD Reasearch Paper</a></li>
+
+			<li class="navbar_li"><a th:href="@{/admin/}">Admin
+					Setting</a></li>
+			<li class="navbar_li"><a th:href="@{/user/userprofileupdate}">Setting</a></li>
+			<li class="navbar_li"><a th:href="@{/admin/profile}"><span
+					admin name></span></a></li>
+			<li class="navbar_li"><a th:href="@{/logout}">Logout</a></li>
+
+
+		</ul>
+
+	</nav>
+
+
+	<div th:replace="${content}"></div>
+
+	<script th:src="@{/js/script.js}"></script>
+</body>
+
+</html>

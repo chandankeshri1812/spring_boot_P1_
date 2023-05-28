@@ -29,7 +29,7 @@ public class EmailServices {
 		properties.put("mail.smtp.host", "smtp.gmail.com");
 
 		String username = "testingspringbootapi";
-		String password = "jhlkhfsdalgf";
+		String password = "atzbjymcasjakdec";
 
 		// session
 		Session session = Session.getInstance(properties, new Authenticator() {

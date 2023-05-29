@@ -23,9 +23,10 @@
 
 
 		<ul class="navbar_ul">
-			<li class="navbar_li"><a href="/">Home</a></li>
-			<li class="navbar_li"><a href="/about">About</a></li>
-			<li class="navbar_li"><a href="/signin">Reasearch Paper</a></li>
+			<li class="navbar_li"><a th:href="@{/}">Home</a></li>
+			<li class="navbar_li"><a th:href="@{/about}">About</a></li>
+			<li class="navbar_li"><a th:href="@{/signin}">Reasearch
+					Paper</a></li>
 			<li class="navbar_li"><a th:href="@{/signin}">Login</a></li>
 			<li class="navbar_li"><a th:href="@{/signup}">Sign Up</a></li>
 
@@ -33,14 +34,15 @@
 		</ul>
 
 	</nav>
+	<section class="main_user_content">
+
+		<div th:replace="${content}"></div>
+
+	</section>
 
 
-	<div th:replace="${content}"></div>
-	
-	
-	<footer class="footer">
-	
-	</footer>
+
+	<footer class="footer"> </footer>
 
 	<script th:src="@{/js/script.js}"></script>
 </body>

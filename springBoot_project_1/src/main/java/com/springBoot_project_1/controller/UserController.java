@@ -1,6 +1,7 @@
 package com.springBoot_project_1.controller;
 
 import java.security.Principal;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -15,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.springBoot_project_1.dao.UserRepository;
 import com.springBoot_project_1.helper.Message;
+import com.springBoot_project_1.models.Articles;
 import com.springBoot_project_1.models.User;
+import com.springBoot_project_1.services.ArticlesService;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -28,6 +31,9 @@ public class UserController {
 
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+	@Autowired
+	private ArticlesService articlesService;
 
 	@RequestMapping("/index")
 	public String dasboard(Model model, Principal principal) {
@@ -61,6 +67,7 @@ public class UserController {
 		return "normal/profileupdate";
 	}
 
+	
 //	 this handle for  update profile of  user 
 	@RequestMapping(value = "/do_update_profile", method = RequestMethod.POST)
 	public String doUpdateProfile(@RequestParam("oldPassword") String oldPassword,
@@ -114,4 +121,14 @@ public class UserController {
 //		}
 	}
 
+	// find all articles
+	@RequestMapping("/allArticle")
+	public String findAllArticles(Model model) {
+		List<Articles> articles = articlesService.findAllArticles();
+//		System.out.println("all Articles  are : " + articles);
+		model.addAttribute("articles", articles);
+		return "normal/userarticleALl";
+	}
+
+	
 }

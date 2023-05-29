@@ -26,7 +26,7 @@ public class CustomSuccessorHandler implements AuthenticationSuccessHandler{
 		
 		Set<String> roles = AuthorityUtils.authorityListToSet(authentication.getAuthorities());
 		if(roles.contains("ROLE_ADMIN")) {
-			response.sendRedirect("/admin/dash");
+			response.sendRedirect("/admin/allArticle");
 		}else {
 			response.sendRedirect("/user/index");
 

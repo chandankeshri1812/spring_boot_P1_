@@ -26,25 +26,25 @@ public class AdminContoller {
 	@Autowired
 	private ArticlesService articlesService;
 
-	@RequestMapping("/dash")
-	public String admin() {
-
-		System.out.println("admin dashbaord");
-		return "admin/adminDashboard";
-	}
-
 	
+	// find all articles 
+//	@RequestMapping("/allArticle")
+//	public String  findAllArticles(Model model) {
+//		List<Articles> articles = articlesService.findAllArticles();
+//		System.out.println("all Articles  are : " + articles);
+//		model.addAttribute(articles);
+//		return "admin/allArticle";
+//	}
 
 	// find all articles 
 	@RequestMapping("/allArticle")
 	public String  findAllArticles(Model model) {
 		List<Articles> articles = articlesService.findAllArticles();
 		System.out.println("all Articles  are : " + articles);
-		model.addAttribute(articles);
+		model.addAttribute("articles" ,articles);
 		return "admin/allArticle";
 	}
 
-	
 
 	// create the articles form
 	@RequestMapping("/add_article")
@@ -71,12 +71,5 @@ public class AdminContoller {
 	
 	
 	
-	
-//	// find by id
-//	@GetMapping("/{id}")
-//	public Optional<Articles> findByIdArticles(@PathVariable Integer id) {
-//		System.out.println("findByIdArticles : " + articlesService.findByIdArticles(id));
-//		return articlesService.findByIdArticles(id);
-//	}
 
 }

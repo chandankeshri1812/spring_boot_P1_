@@ -49,3 +49,90 @@
 .reasearch_form_textarea {
     width: 100%;
 }
+
+/* ------------------------------------------- */
+/*  all articles page  */
+
+.all_article_container{
+    width: 100vw;
+    /* border: 2px solid red; */
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.allArticles_card_main{
+     /* border: 2px solid rgb(228, 160, 160); */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 90%;
+     margin: 10vh 0vh;
+     padding: 5vh 0vh;
+     flex-direction: column;
+}
+
+
+.allArticles_card{
+    /* background-color: aquamarine; */
+    padding: 20px ;
+    margin: 20px;
+    width: 80%;
+}
+
+.allArticles_sub_card_row{
+display: flex;
+justify-content: space-between;
+/* background-color: rgb(115, 114, 112); */
+width: 100%;
+padding: 10px 0px;
+}
+.allArticles_card_col_left{
+    /* border: 3px solid yellow; */
+    width: 80%;
+}
+.allArticles_card_col_left a{
+    text-decoration: none;
+    color: #1a0dab;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+
+}
+.allArticles_card_col_left a:hover{
+    text-decoration: underline;
+}
+/* .allArticles_card_col_left a:link, a:visited{
+  
+    color: rgb(22, 22, 105);
+
+    
+} */
+
+.allArticles_card_col_right{
+    /* border: 3px solid rgb(0, 0, 0); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 20%;
+    padding: 10px;
+}
+.allArticles_card_col_right_total_citations{
+   /* background-color: blue; */
+    width: 40%;
+
+}
+
+
+.allArticles_card_col_right_publicationDate{
+    /* background-color: red; */
+      width: 60%;
+
+}
+.allarticle_btn_read_more{
+    margin: 20px;
+}

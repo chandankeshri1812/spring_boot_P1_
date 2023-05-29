@@ -31,8 +31,8 @@ If you want this size in pixels (px)	Declare this percent (%)
     margin: 0;
 }
 :root {
-    --btn-primary: #115497;
-    --btn-seconday: #412727;
+    --btn-primary: #96C2DB,;
+    --btn-seconday: #E5EDF1;
   }
   
   
@@ -72,6 +72,7 @@ tt {
     *font-size: 108%;
     line-height: 100%;
 }
+
 
 /* margin and padding values are reset for all these elements
  * you could remove from there elements you do not used in your documents, but I don't think it'd worth it

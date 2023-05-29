@@ -30,17 +30,17 @@ public class HomeController {
 	private BCryptPasswordEncoder passwordEncoder;
 	@Autowired
 	private UserRepository userRepository;
-	
+
 //	@Autowired
 //	private JwtGeneratorInterface jwtGenerator;
-	
+
 //	@Autowired
 //	private UserService userService;
 
 	@RequestMapping("/")
 	public String home(Model model) {
 
-		model.addAttribute("title", "Home : perosnal portfolio");
+		model.addAttribute("title", "Home : home portfolio");
 		return "home";
 	}
 
@@ -102,8 +102,7 @@ public class HomeController {
 		return "login";
 
 	}
-	
-	
+
 //	  @PostMapping("/login")
 //	  public ResponseEntity<?> login(@RequestBody User user) {
 //		return null;
@@ -121,9 +120,8 @@ public class HomeController {
 //	    } catch (Exception e) {
 //	       return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
 //	    }
-		  
+
 //		  user.getEmail()
 //	  }
-	
 
 }

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="admin/baseAdmin::layout(~{::section})">
+
+<head>
+	<meta charset="UTF-8">
+	<title>This is Reasarch Form page</title>
+</head>
+
+<body>
+
+	<section class="reasearch_form_container">
+
+		<div class="reasearch_form_card">
+			<h1>Add your Reasarch Paper Here With the following details </h1>
+			<form th:action="@{/admin/do_add_article}" class="reasearch_form" method="post">
+				<!-- <div class="reasearch_form_row"> -->
+
+
+
+				<div class="research_form_col">
+					<!-- title -->
+					<div class="common-input-container">
+						<label class="common-form-label" for="name_field">Enter Title of The Paper
+						</label>
+						<input type="text" class="signup_form_control common-form-input"
+							placeholder="Title of the Paper" name="title" required>
+					</div>
+					<!-- authors -->
+					<div class="common-input-container">
+						<label class="common-form-label" for="name_field">Enter Authors of The Paper
+						</label>
+						<input type="text" class="signup_form_control common-form-input"
+							placeholder="Authors of the Paper" name="authors">
+					</div>
+				</div>
+
+
+
+				<div class="research_form_col">
+					<!-- publisher -->
+					<div class="common-input-container">
+						<label class="common-form-label" for="name_field">Enter Publisher of The Paper
+						</label>
+						<input type="text" class="signup_form_control common-form-input"
+							placeholder="Publisher of the Paper" name="publisher">
+					</div>
+
+					<!-- journal -->
+					<div class="common-input-container">
+						<label class="common-form-label" for="name_field">Enter Journal of The Paper
+						</label>
+						<input type="text" class="signup_form_control common-form-input"
+							placeholder="Journal of the Paper" name="journal">
+					</div>
+				</div>
+
+
+				<div class="research_form_col">
+					<!-- book -->
+					<div class="common-input-container">
+						<label class="common-form-label" for="name_field">Enter Book Name
+						</label>
+						<input type="text" class="signup_form_control common-form-input" placeholder="Book Name"
+							name="book">
+					</div>
+
+					<!-- pages -->
+					<div class="common-input-container">
+						<label class="common-form-label" for="name_field">Enter pages
+						</label>
+						<input type="text" class="signup_form_control common-form-input" placeholder="pages"
+							name="pages">
+					</div>
+
+				</div>
+
+
+				<div class="research_form_col">
+
+
+					<!-- totalCitations -->
+					<div class="common-input-container">
+						<label class="common-form-label" for="name_field">Enter totalCitations
+						</label>
+						<input type="number" class="signup_form_control common-form-input" placeholder="totalCitations"
+							min="0" max="200" name="totalCitations">
+					</div>
+
+
+					<!-- publication date -->
+					<div class="common-input-container">
+						<label class="common-form-label" for="name_field">Enter Publication Date
+						</label>
+						<input type="number" class="signup_form_control common-form-input" placeholder="YYYY" min="1980"
+							max="2023" name="publicationDate">
+					</div>
+
+
+				</div>
+
+				<div class="research_form_col">
+
+
+					<!-- volumne -->
+					<div class="common-input-container">
+						<label class="common-form-label" for="name_field">Enter volumne
+						</label>
+						<input type="number" class="signup_form_control common-form-input" placeholder="volumne" min="0"
+							name="volumne">
+					</div>
+
+					<!-- issue -->
+					<div class="common-input-container">
+						<label class="common-form-label" for="name_field">Enter issue
+						</label>
+						<input type="number" class="signup_form_control common-form-input" placeholder="issue"
+							name="issue">
+					</div>
+
+				</div>
+				<div class="research_form_col">
+
+
+					<!-- pdfLink -->
+					<div class="common-input-container">
+						<label class="common-form-label" for="name_field">Enter pdfLink
+						</label>
+						<input type="url" class="signup_form_control common-form-input" placeholder="pdfLink" min="0"
+							name="pdfLink">
+					</div>
+
+					<!-- titleLink -->
+					<div class="common-input-container">
+						<label class="common-form-label" for="name_field">Enter titleLink
+						</label>
+						<input type="url" class="signup_form_control common-form-input" placeholder="titleLink"
+							name="titleLink">
+					</div>
+
+				</div>
+
+
+
+				<div class="reasearch_form_row">
+					<!-- description -->
+					<div class="common-input-container">
+						<label class="common-form-label common-form-input">Entering description</label>
+						<textarea name="description" class="reasearch_form_textarea" placeholder="Write description"
+							rows="3" cols="100"></textarea>
+					</div>
+				</div>
+				<div class="reasearch_form_row">
+					<!-- scholarArticles -->
+					<div class="common-input-container">
+						<label class="common-form-label common-form-input">Entering scholarArticles</label>
+						<textarea name="scholarArticles" class="reasearch_form_textarea"
+							placeholder="Write scholarArticles" rows="3" cols="100"></textarea>
+
+					</div>
+				</div>
+
+
+				<div class="reasearch_form_row">
+					<button type="submit" class="btn btn-primary">Add Reasearch Paper</button>
+					<button type="reset" class="btn btn-secondary">Reset</button>
+				</div>
+
+
+
+			</form>
+		</div>
+
+	</section>
+
+</body>

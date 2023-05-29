@@ -8,7 +8,7 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <link rel="stylesheet" th:href="@{/css/style.css}" />
-<link rel="stylesheet" th:href="@{/css/userprofile.css}">
+<link rel="stylesheet" th:href="@{/css/admin.css}">
 
 
 <title th:text="${title}">base page for admin dashbaord</title>
@@ -24,9 +24,9 @@
 		<ul class="navbar_ul">
 
 			<li class="navbar_li"><a href="#">Reasearch Paper</a></li>
-<li class="navbar_li"><a href="#">ADD Reasearch Paper</a></li>
+<li class="navbar_li"><a th:href="@{/admin/add_article}">ADD Reasearch Paper</a></li>
 
-			<li class="navbar_li"><a th:href="@{/admin/}">Admin
+			<li class="navbar_li"><a th:href="@{/admin/dash}">Admin
 					Setting</a></li>
 			<li class="navbar_li"><a th:href="@{/user/userprofileupdate}">Setting</a></li>
 			<li class="navbar_li"><a th:href="@{/admin/profile}"><span

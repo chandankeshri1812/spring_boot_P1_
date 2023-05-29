@@ -1,0 +1,51 @@
+.reasearch_form_container {
+    width: 100vw;
+    border: 2px solid red;
+    margin-top: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.reasearch_form_card {
+    /* border: 2px solid rgb(228, 160, 160); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 10vh 0vh;
+    padding: 5vh 0vh;
+    flex-direction: column;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+
+}
+
+.reasearch_form_card h1 {}
+
+.reasearch_form {}
+
+.reasearch_form_row {
+    /* display: flex;
+ flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.research_form_col {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+/* border: 5px solid #000; */
+}
+.research_form_col div{
+   
+    width: 50%;
+    
+}
+
+.reasearch_form_textarea {
+    width: 100%;
+}

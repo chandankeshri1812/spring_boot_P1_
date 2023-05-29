@@ -20,33 +20,38 @@ public class Articles {
 	@Column(length=1000)
 	private String authors;
 	
-	@Column(length=4)
-	private int publicationDate;
+	
 	@Column(length=1000)
 	private String publisher;
 	
-	@Column(length=5000)
-	private String description;
-
-	private int totalCitations;
-	
-	@Column(length=5000)
-	private String scholarArticles;
-	
-	private int pages;
 	
 	private String journal;
-	
 	private String book;
 	
-	private int volumne;
-	private int issue;
+	
+	private String publicationDate;
+	private String totalCitations;
+	private String pages;
+	private String volumne;
+	private String issue;
 	
 	@Column(length=1000)
 	private String pdfLink;
 	
 	@Column(length=1000)
 	private String titleLink;
+	
+	
+	@Column(length=65530)
+	private String description;
+
+	@Column(length=65530)
+	private String scholarArticles;
+	
+//	----------------------------------
+	
+	
+	
 
 	public int getaId() {
 		return aId;
@@ -72,11 +77,11 @@ public class Articles {
 		this.authors = authors;
 	}
 
-	public int getPublicationDate() {
+	public String getPublicationDate() {
 		return publicationDate;
 	}
 
-	public void setPublicationDate(int publicationDate) {
+	public void setPublicationDate(String publicationDate) {
 		this.publicationDate = publicationDate;
 	}
 
@@ -96,11 +101,11 @@ public class Articles {
 		this.description = description;
 	}
 
-	public int getTotalCitations() {
+	public String getTotalCitations() {
 		return totalCitations;
 	}
 
-	public void setTotalCitations(int totalCitations) {
+	public void setTotalCitations(String totalCitations) {
 		this.totalCitations = totalCitations;
 	}
 
@@ -112,11 +117,11 @@ public class Articles {
 		this.scholarArticles = scholarArticles;
 	}
 
-	public int getPages() {
+	public String getPages() {
 		return pages;
 	}
 
-	public void setPages(int pages) {
+	public void setPages(String pages) {
 		this.pages = pages;
 	}
 
@@ -136,19 +141,19 @@ public class Articles {
 		this.book = book;
 	}
 
-	public int getVolumne() {
+	public String getVolumne() {
 		return volumne;
 	}
 
-	public void setVolumne(int volumne) {
+	public void setVolumne(String volumne) {
 		this.volumne = volumne;
 	}
 
-	public int getIssue() {
+	public String getIssue() {
 		return issue;
 	}
 
-	public void setIssue(int issue) {
+	public void setIssue(String issue) {
 		this.issue = issue;
 	}
 
@@ -177,8 +182,8 @@ public class Articles {
 				+ ", titleLink=" + titleLink + "]";
 	}
 
-	public Articles(int aId, String title, String authors, int publicationDate, String publisher, String description,
-			int totalCitations, String scholarArticles, int pages, String journal, String book, int volumne, int issue,
+	public Articles(int aId, String title, String authors, String publicationDate, String publisher, String description,
+			String totalCitations, String scholarArticles, String pages, String journal, String book, String volumne, String issue,
 			String pdfLink, String titleLink) {
 		super();
 		this.aId = aId;

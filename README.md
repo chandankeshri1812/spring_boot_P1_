@@ -1,1 +1,14 @@
-# spring_boot_P1_
+# Reasearch Scholar
+
+
+
+## Tech Stack
+
+**Client:** Html, Css,JavaScirpt
+
+**Server:** Spring Boot
+
+**DataBase:** Mysql
+
+
+

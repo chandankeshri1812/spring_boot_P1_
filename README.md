@@ -67,4 +67,7 @@ Detailed documentation of the API endpoints and their functionalities can be fou
 Contributions to the project are welcome. If you find any issues or have any suggestions for improvement, feel free to create a pull request or raise an issue in the repository.
 
 
+## Screenshots
+
+![App Screenshot](https://drive.google.com/file/d/1Sf2Cud1APEy8ehkCi4d3wVnRqrs6bbtD/view?usp=share_link)
 

@@ -28,7 +28,7 @@ public class CustomSuccessorHandler implements AuthenticationSuccessHandler{
 		if(roles.contains("ROLE_ADMIN")) {
 			response.sendRedirect("/admin/allArticle");
 		}else {
-			response.sendRedirect("/user/index");
+			response.sendRedirect("/user/allArticle");
 
 		} 
 		

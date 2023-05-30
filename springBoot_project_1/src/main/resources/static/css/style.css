@@ -32,7 +32,7 @@ If you want this size in pixels (px)	Declare this percent (%)
 }
 :root {
     --btn-primary: #96C2DB,;
-    --btn-seconday: #E5EDF1;
+    --btn-seconday: #272829;
   }
   
   
@@ -319,7 +319,11 @@ abel {
 
 
 
-
+.main_user_content{
+	/* border:2px solid yellow; */
+	margin:10vh 0vh 0vh 0vh;
+    z-index: auto;
+}
 
 
 .common-input-container {
@@ -352,18 +356,19 @@ padding: 10px 15px;
 
 .navbar {
     color: rgb(255, 255, 255);
-    /* border: 2px solid red; */
+    /*  background: #2c2c2c; */
+    background-color: var(--btn-seconday);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background: #2c2c2c;
+   z-index:  120;
     padding: 0 15px;
     height: 10vh;
 position: fixed;
 top: 0;
   width: 100%;
-
+/* border: 2px solid red; */
 }
 
 .navbar_ul {
@@ -391,16 +396,112 @@ top: 0;
 
 /* footer */
 .footer{
-    height: 8vh;
+    /* height: 8vh; */
     width: 100vw;
     background-color: var(--btn-seconday);
-    position: absolute;
+    position: relative;
     bottom: 0;
     right: 0;
-
+/* border:2px solid red; */
+color: white;
+font-size: 14px;
+font-family: sans-serif;
+padding: 30px 0px;
+margin-top: 20px ;
+}
+.footer_card{
+    width: 80%;
+    margin: auto;
 }
 
+.footer_row{
 
+    /* border: 2px solid green; */
+    /* border: 2px solid rgb(146, 54, 0); */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* width: 80%;
+    margin: auto; */
+    
+}
+.footer_row_1{
+    width: 100%;
+    padding: 10px 0px;
+    padding: 10px 0px;
+}
 
+.footer_row_2{
+
+/* background-color: #e05c5c; */
+}
+.footer_col{
+/* border :2px solid red; */
+padding: 10px 15px;
+
+}
+.footer_col_1{
+    width: 25%;
+
+}
+.footer_col_2{
+width: 35%;
+padding: 10px;
+}
+.footer_col_3{
+width: 20%;
+}
+
+.footer_col_4{
+width: 20%;
+}
+.foooter_email_Cont{
+    display: flex;
+    flex-direction: row;
+}
+.footer_email  {
+width: 100% !important;
+}
+.footer_line_Cont{
+
+    margin: 10px 0px;
+    
+    
+}
+.footer_follow_cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+.footer_line{
+    width: 100%;
+    
+    
+    border: 1px solid rgb(194, 194, 194);
+}
+
+.footer_row_2{
+  
+}
+.footer_col_copyright{
+width: 60%;
+/* background: green; */
+}
+.footer_col_terms_policy{
+width: 40%;
+/* background-color: red; */
+}
+.footer_col_terms_policy_container{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.footer_col_terms_policy_container a{
+    text-decoration: none;
+    color: white;
+}
 
 /* ---------------------- */

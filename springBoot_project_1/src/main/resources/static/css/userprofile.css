@@ -188,7 +188,7 @@ margin: 20px;
 .all_article_container{
     width: 100vw;
     /* border: 2px solid red; */
-    margin-top: 10vh;
+  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,7 +201,7 @@ margin: 20px;
      justify-content: center;
      align-items: center;
      width: 90%;
-     margin: 10vh 0vh;
+     
      padding: 5vh 0vh;
      flex-direction: column;
 }

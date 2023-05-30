@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-	th:fragment="layout(content)">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
 
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-<link rel="stylesheet" th:href="@{/css/style.css}" />
-<link rel="stylesheet" th:href="@{/css/login.css}" />
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="stylesheet" th:href="@{/css/style.css}" />
+	<link rel="stylesheet" th:href="@{/css/login.css}" />
 
 
-<title th:text="${title}">base page</title>
+
+	<title th:text="${title}">base page</title>
 
 </head>
 
@@ -24,7 +22,7 @@
 
 		<ul class="navbar_ul">
 			<li class="navbar_li"><a th:href="@{/}">Home</a></li>
-			<li class="navbar_li"><a th:href="@{/about}">About</a></li>
+			
 			<li class="navbar_li"><a th:href="@{/signin}">Reasearch
 					Paper</a></li>
 			<li class="navbar_li"><a th:href="@{/signin}">Login</a></li>
@@ -42,7 +40,94 @@
 
 
 
-	<footer class="footer"> </footer>
+	<footer class="footer">
+
+		<div class="footer_card">
+
+
+
+			<div class="footer_row footer_row_1">
+				<div class="footer_col footer_col_1">
+					<div>
+						websiteName
+					</div>
+					<div>
+						<p>
+							Thoughtful marketing for dental practices
+						</p>
+					</div>
+				</div>
+
+				<div class="footer_col footer_col_2">
+					<div>
+						Dental marketing insights for clever dentists direct to your indox
+					</div>
+					<div>
+						<form action="">
+							<div class="foooter_email_Cont">
+
+								<input class="footer_email" type="email" placeholder="YOUR E-MAIL">
+
+
+								<button class="btn btn-primary" type="button">SUBSCRIBE</button>
+							</div>
+
+						</form>
+					</div>
+				</div>
+
+
+				<div class="footer_col footer_col_3">
+					<div>
+						Follow US
+					</div>
+					<div class="footer_follow_cont">
+						<div>
+							<a href="#">I</a>
+						</div>
+						<div>
+							<a href="#">F</a>
+						</div>
+						<div>
+							<a href="#">L</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer_col footer_col_1">
+					<div>
+						CALL US
+					</div>
+					<div>
+						<div>
+							9874563210
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div class="footer_row footer_line_Cont">
+				<hr class="footer_line">
+			</div>
+			<div class="footer_row footer_row_2">
+
+				<div class="footer_col_copyright">
+					&copy; 2023 websiteName , ALL Rights Reserved
+				</div>
+				<div class="footer_col_terms_policy">
+					<div class="footer_col_terms_policy_container">
+						<a href="#">Privacy Policy</a>
+						<a href="#">Terms and Conditions</a>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+	</footer>
 
 	<script th:src="@{/js/script.js}"></script>
 </body>

@@ -1,7 +1,6 @@
 .reasearch_form_container {
     width: 100vw;
-    border: 2px solid red;
-    margin-top: 10vh;
+   
 
     display: flex;
     justify-content: center;
@@ -56,7 +55,7 @@
 .all_article_container{
     width: 100vw;
     /* border: 2px solid red; */
-    margin-top: 10vh;
+    
     display: flex;
     justify-content: center;
     align-items: center;

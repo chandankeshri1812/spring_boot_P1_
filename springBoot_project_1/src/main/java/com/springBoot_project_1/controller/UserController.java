@@ -117,7 +117,7 @@ public class UserController {
 			return "redirect:/user/userprofileupdate";
 		}
 
-		return "redirect:/user/index";
+		return "redirect:/user/allArticle";
 //		}
 	}
 
